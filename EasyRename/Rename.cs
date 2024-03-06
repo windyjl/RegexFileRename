@@ -54,7 +54,7 @@ namespace EasyRename
                 }
                 else
                     renamePlan[i] = item;
-                
+
             }
 
             string[] shows = new string[renamePlan.Length];
@@ -78,7 +78,7 @@ namespace EasyRename
                 if (System.IO.File.Exists(renamePlan[i]) && IsInFilterType(item))
                     list.Add(renamePlan[i] + "Exist");
             }
-            if(list.Count > 0) 
+            if (list.Count > 0)
                 MessageBox.Show($"{string.Join("\r\n", list)}", "File already exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private bool IsInFilterType(string item)
@@ -120,6 +120,11 @@ namespace EasyRename
             //labelPreview.Text = string.Join("\r\n", shows);
             listBoxPlan.Items.Clear();
             listBoxPlan.Items.AddRange(shows);
+        }
+
+        private void buttonExtensionPreset_Click(object sender, EventArgs e)
+        {
+            textBoxFileType.Text = "(png|jpg|gif)";
         }
     }
 }

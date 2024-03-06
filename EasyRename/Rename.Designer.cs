@@ -44,11 +44,9 @@
             listBoxPlan = new ListBox();
             buttonGetNumber = new Button();
             labelPreset = new Label();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
             labelFileType = new Label();
             textBoxFileType = new TextBox();
+            buttonExtensionPreset = new Button();
             SuspendLayout();
             // 
             // buttonBrowse
@@ -197,58 +195,32 @@
             labelPreset.TabIndex = 15;
             labelPreset.Text = "preset";
             // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Checked = true;
-            checkBox1.CheckState = CheckState.Checked;
-            checkBox1.Location = new Point(161, 92);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(46, 21);
-            checkBox1.TabIndex = 16;
-            checkBox1.Text = "jpg";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Checked = true;
-            checkBox2.CheckState = CheckState.Checked;
-            checkBox2.Location = new Point(213, 92);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(42, 21);
-            checkBox2.TabIndex = 17;
-            checkBox2.Text = "gif";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Checked = true;
-            checkBox3.CheckState = CheckState.Checked;
-            checkBox3.Location = new Point(105, 91);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(50, 21);
-            checkBox3.TabIndex = 18;
-            checkBox3.Text = "png";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
             // labelFileType
             // 
             labelFileType.AutoSize = true;
             labelFileType.Location = new Point(15, 56);
             labelFileType.Name = "labelFileType";
-            labelFileType.Size = new Size(54, 17);
+            labelFileType.Size = new Size(93, 17);
             labelFileType.TabIndex = 20;
-            labelFileType.Text = "file type";
+            labelFileType.Text = "filter extension";
             // 
             // textBoxFileType
             // 
-            textBoxFileType.Location = new Point(72, 53);
+            textBoxFileType.Location = new Point(114, 53);
             textBoxFileType.Name = "textBoxFileType";
             textBoxFileType.Size = new Size(213, 23);
             textBoxFileType.TabIndex = 19;
             textBoxFileType.Text = "(png|jpg|gif)";
+            // 
+            // buttonExtensionPreset
+            // 
+            buttonExtensionPreset.Location = new Point(115, 82);
+            buttonExtensionPreset.Name = "buttonExtensionPreset";
+            buttonExtensionPreset.Size = new Size(62, 26);
+            buttonExtensionPreset.TabIndex = 21;
+            buttonExtensionPreset.Text = "Image";
+            buttonExtensionPreset.UseVisualStyleBackColor = true;
+            buttonExtensionPreset.Click += buttonExtensionPreset_Click;
             // 
             // Form1
             // 
@@ -256,11 +228,9 @@
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(801, 379);
+            Controls.Add(buttonExtensionPreset);
             Controls.Add(labelFileType);
             Controls.Add(textBoxFileType);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
             Controls.Add(labelPreset);
             Controls.Add(buttonGetNumber);
             Controls.Add(listBoxPlan);
@@ -303,10 +273,8 @@
         private ListBox listBoxPlan;
         private Button buttonGetNumber;
         private Label labelPreset;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
         private Label labelFileType;
         private TextBox textBoxFileType;
+        private Button buttonExtensionPreset;
     }
 }
